@@ -1,9 +1,3 @@
-<script setup lang="ts">
-import { Head } from '@inertiajs/vue3'
-</script>
-
 <template>
-  <div>
-    <Head title="Homepage" />
-  </div>
+  <Default title="Homepage" />
 </template>
