@@ -3,6 +3,7 @@ import type { NextFn } from '@adonisjs/core/types/http'
 import type { InferSharedProps } from '@adonisjs/inertia/types'
 import inertiaConfig from '#config/inertia'
 import router from '@adonisjs/core/services/router'
+import { Routes } from '#start/routes'
 
 export type NavItem = {
   href: string
@@ -18,11 +19,11 @@ export type AppSharedProps = {
 const nav: Nav = [
   {
     title: 'Home',
-    href: router.builder().make('home'),
+    href: router.builder().make(Routes.Home),
   },
   {
     title: 'Dashboard',
-    href: router.builder().make('dashboard'),
+    href: router.builder().make(Routes.Dashboard),
   },
 ]
 
