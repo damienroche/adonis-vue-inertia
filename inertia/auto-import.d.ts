@@ -57,6 +57,8 @@ declare global {
   const useCssVars: typeof import('vue')['useCssVars']
   const useId: typeof import('vue')['useId']
   const useModel: typeof import('vue')['useModel']
+  const usePage: typeof import('./composables/page')['usePage']
+  const usePageProps: typeof import('./composables/page')['usePageProps']
   const useSlots: typeof import('vue')['useSlots']
   const useTemplateRef: typeof import('vue')['useTemplateRef']
   const useTuyau: typeof import('./composables/tuyau')['useTuyau']
@@ -127,6 +129,8 @@ declare module 'vue' {
     readonly useCssVars: UnwrapRef<typeof import('vue')['useCssVars']>
     readonly useId: UnwrapRef<typeof import('vue')['useId']>
     readonly useModel: UnwrapRef<typeof import('vue')['useModel']>
+    readonly usePage: UnwrapRef<typeof import('./composables/page')['usePage']>
+    readonly usePageProps: UnwrapRef<typeof import('./composables/page')['usePageProps']>
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
     readonly useTemplateRef: UnwrapRef<typeof import('vue')['useTemplateRef']>
     readonly useTuyau: UnwrapRef<typeof import('./composables/tuyau')['useTuyau']>

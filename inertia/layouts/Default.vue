@@ -3,8 +3,7 @@ import { Head, Link } from '@inertiajs/vue3'
 defineProps<{
   title: string
 }>()
-
-const { tuyau } = useTuyau()
+const { app } = usePageProps()
 </script>
 
 <template>
@@ -12,11 +11,8 @@ const { tuyau } = useTuyau()
   <div>
     <header class="max-w-screen-lg mx-auto py-4">
       <nav>
-        <Button as-child variant="ghost">
-          <Link :href="tuyau.$route('home').path">Home</Link>
-        </Button>
-        <Button as-child variant="ghost">
-          <Link :href="tuyau.$route('dashboard').path">Dashboard</Link>
+        <Button as-child variant="ghost" v-for="link in app.nav" :key="link.href">
+          <Link :href="link.href">{{ link.title }}</Link>
         </Button>
       </nav>
     </header>
