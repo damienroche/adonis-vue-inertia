@@ -8,15 +8,8 @@
 */
 
 import router from '@adonisjs/core/services/router'
-router
-  .on('/')
-  .renderInertia('home', {
-    title: 'Home',
-  })
-  .as('home')
-router
-  .on('/dashboard')
-  .renderInertia('dashboard', {
-    title: 'Dashboard',
-  })
-  .as('dashboard')
+const DashboardController = () => import('#controllers/dashboard_controller')
+const HomeController = () => import('#controllers/home_controller')
+
+router.get('/', [HomeController, 'render']).as('home')
+router.get('/dashboard', [DashboardController, 'render']).as('dashboard')

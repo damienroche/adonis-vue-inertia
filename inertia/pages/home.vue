@@ -1,10 +1,13 @@
 <script lang="ts" setup>
+import type { HomePageProps } from '@/types'
+
 defineProps<{
-  title: string
+  page: HomePageProps
 }>()
 </script>
 
 <template>
-  <Default :title="title">
+  <Default :title="page.title">
+    <h1>{{ page.title }}</h1>
   </Default>
 </template>

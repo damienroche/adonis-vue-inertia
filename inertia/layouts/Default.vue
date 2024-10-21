@@ -8,8 +8,8 @@ const { tuyau } = useTuyau()
 </script>
 
 <template>
+  <Head :title="title" />
   <div>
-    <Head :title="title" />
     <header class="max-w-screen-lg mx-auto py-4">
       <nav>
         <Button as-child variant="ghost">
@@ -20,6 +20,8 @@ const { tuyau } = useTuyau()
         </Button>
       </nav>
     </header>
-    <slot />
+    <div class="max-w-screen-lg mx-auto">
+      <slot />
+    </div>
   </div>
 </template>
