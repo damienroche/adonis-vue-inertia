@@ -5,14 +5,13 @@ module.exports = {
   darkMode: ["class"],
   safelist: ["dark"],
   prefix: "",
-  
+
   content: [
-    './pages/**/*.{ts,tsx,vue}',
-    './components/**/*.{ts,tsx,vue}',
-    './app/**/*.{ts,tsx,vue}',
-    './src/**/*.{ts,tsx,vue}',
+    './inertia/pages/**/*.{ts,tsx,vue}',
+    './inertia/components/**/*.{ts,tsx,vue}',
+    './inertia/layouts/**/*.{ts,tsx,vue}',
 	],
-  
+
   theme: {
     container: {
       center: true,
