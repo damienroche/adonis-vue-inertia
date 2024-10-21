@@ -15,7 +15,7 @@ export default defineConfig({
     },
   },
   plugins: [
-    inertia({ ssr: { enabled: false } }),
+    inertia({ ssr: { enabled: true, entrypoint: 'inertia/app/ssr.ts' } }),
     vue(),
     adonisjs({ entrypoints: ['inertia/app/app.ts'], reload: ['resources/views/**/*.edge'] }),
     Components({
